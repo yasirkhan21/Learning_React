@@ -1,12 +1,12 @@
 import React from "react";
-import {useDispatch, useSelector } from "react-redux";
-import {removeTodo,updateTodo} from '../features/Todo/todoSlice'
+import { useDispatch, useSelector } from "react-redux";
+import { removeTodo } from "../features/Todo/todoSlice";
 function Todos() {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-3xl font-bold underline">Todos</div>
+      <div className="text-3xl font-bold ">Todos</div>
       <ul className="list-none">
         {todos.map((todo) => (
           <li
@@ -33,7 +33,6 @@ function Todos() {
                 />
               </svg>
             </button>
-           
           </li>
         ))}
       </ul>
